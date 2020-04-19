@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Copara figuras</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="title">Piensa en 3 o 4 números e identifica que tipo de triangulo o cuadrilatero tienes</h1>
+
+        <div class="container-btn">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-type" data-toggle="modal" data-target="#modaltriagulo">
+        Triangulo
+      </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modaltriagulo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Triangulo</h5>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Piensa en los 3 lados de un tringulo, ¿en que medidas estas pensando?, escribelas aquí y te diremos que tipo de triangulo es</p>
+                            <label class="txt-lados" for="ladoT1">Lado #1</label>
+                            <input id="ladoT1" name="data" class="form-control box-text" type="text" required onkeypress="return soloNumero(event)">
+                            <label class="txt-lados" for="ladoT2">Lado #2</label>
+                            <input id="ladoT2" name="data" class="form-control box-text" type="text" required onkeypress="return soloNumero(event)">
+                            <label class="txt-lados" for="ladoT3">Lado #3</label>
+                            <input id="ladoT3" name="data" class="form-control box-text" type="text" required onkeypress="return soloNumero(event)">
+                            <br>
+                            <h1 class="resultado" id="ResultadoTriangulo"></h1>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="resetT">Cerrar</button>
+                            <button type="button" class="btn btn-primary" id="calcularTriangulo">Identificar</button>
+                            <button type="button" class="btn btn-primary" onclick="limpiarT()">limpar</button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <button type="button" class="btn btn-primary btn-type btn-cuadrilatero" data-toggle="modal" data-target="#modalcuadrilatero">
+                Cuadritero 
+              </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalcuadrilatero" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Cuadrilatero</h5>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Piensa en los 4 lados de un cuadrilatero, ¿en que medidas estas pensando?, escribelas aquí y te diremos que si es un cuadrado, un rectangulo o un trapecio</p>
+                            <label class="txt-lados" for="ladoC1">Lado #1</label>
+                            <input id="ladoC1" name="data" class="form-control box-text" type="text" required onkeypress="return soloNumero(event)">
+                            <label class="txt-lados" for="ladoC2">Lado #2</label>
+                            <input id="ladoC2" name="data" class="form-control box-text" type="text" required onkeypress="return soloNumero(event)">
+                            <label class="txt-lados" for="ladoC3">Lado #3</label>
+                            <input id="ladoC3" name="data" class="form-control box-text" type="text" required onkeypress="return soloNumero(event)">
+                            <label class="txt-lados" for="ladoC4">Lado #4</label>
+                            <input id="ladoC4" name="data" class="form-control box-text" type="text" required onkeypress="return soloNumero(event)">
+                            <br>
+                            <h1 class="resultado" id="ResultadoCuadrilatero"></h1>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="resetC">Cerrar</button>
+                            <button type="button" class="btn btn-primary" id="calcularCuadrilatero">Identificar</button>
+                            <button type="button" class="btn btn-primary" onclick="limpiarC()">limpar</button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="../Javascript/page.js"></script>
+
+</html>
