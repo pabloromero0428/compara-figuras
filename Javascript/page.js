@@ -1,20 +1,34 @@
 var calcularTriangulo = document.getElementById("calcularTriangulo");
 
 
-function isTriangleOrCuadrilatero(lado1, lado2, lado3, lado4) {
+function isTriangle(lado1, lado2, lado3) {
 
     //Validaciones para triangulo
-    if (lado1 == 0 || lado2 == 0 || lado3 == 0) {
-        return ("Ingresaste un número 0 lo que quiere decir que no tienes valores correctos para la figura");
-    } else if (lado1 == lado2 && lado2 == lado3 && lado4 == 0) {
-        return ("El triangulo es equilatero");
-    } else if (lado1 == lado2 || lado2 == lado3 || lado1 == lado3 && lado4 == 0) {
-        return ("El triangulo es isosceles");
-    } else if (lado1 != lado2 && lado2 != lado3 && lado4 == 0) {
-        return ("El triangulo es escaleno");
+    lado1 = parseInt(lado1);
+    lado2 = parseInt(lado2);
+    lado3 = parseInt(lado3);
+    
+    //la suma de dos de sus lados debe ser mayor al tercer lado, se debe cumplir para las tres combinaciones
+
+    if ((lado1 + lado2) > lado3 && (lado1 + lado3) > lado2 && (lado2 + lado3) > lado1) {
+        if (lado1 == 0 || lado2 == 0 || lado3 == 0) {
+            return ("Ingresaste un número 0, lo que quiere decir que no tienes valores correctos para la figura");
+        } else if (lado1 == lado2 && lado2 == lado3) {
+            return ("El triangulo es equilatero");
+        } else if (lado1 == lado2 || lado2 == lado3 || lado1 == lado3) {
+            return ("El triangulo es isosceles");
+        } else if (lado1 != lado2 && lado2 != lado3) {
+            return ("El triangulo es escaleno");
+        }
+    } else {
+        return ("No es posible formar un triángulo con los valores ingresados");
     }
+}
+
+function isCuadrilatero(lado1, lado2, lado3, lado4) {
+    
     //Validaciones para cuadrilarero
-    if (lado4 == 0) {
+    if (lado1 == 0 || lado2 == 0 || lado3 == 0 || lado4 == 0) {
         return ("Ingresaste un número 0 lo que quiere decir que no tienes valores correctos para la figura");
     } else if (lado1 == lado2 && lado1 == lado3 && lado1 == lado4) {
         return ("La figura es un cuadrado");
@@ -30,6 +44,7 @@ function isTriangleOrCuadrilatero(lado1, lado2, lado3, lado4) {
         (lado3 == lado4 && (lado1 > lado2 || lado2 > lado1))) {
         return ("La figura es un trapecio");
     }
+    
 }
 
 calcularTriangulo.addEventListener("click", function() {
@@ -40,7 +55,7 @@ calcularTriangulo.addEventListener("click", function() {
         alert("No se aceptan compos vacios");
         return false
     } else {
-        var triangulo = isTriangleOrCuadrilatero(ladoT1, ladoT2, ladoT3, 0);
+        var triangulo = isTriangle(ladoT1, ladoT2, ladoT3);
         document.getElementById("ResultadoTriangulo").innerHTML = triangulo.toString();
     }
 });
@@ -54,7 +69,7 @@ calcularCuadrilatero.addEventListener("click", function() {
         alert("No se aceptan compos vacios");
         return false
     } else {
-        var cuadrilatero = isTriangleOrCuadrilatero(ladoC1, ladoC2, ladoC3, ladoC4);
+        var cuadrilatero = isCuadrilatero(ladoC1, ladoC2, ladoC3, ladoC4);
         document.getElementById("ResultadoCuadrilatero").innerHTML = cuadrilatero.toString();
     }
 });

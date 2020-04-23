@@ -12,12 +12,12 @@
 <body>
 
     <div class="container">
-        <h1 class="title">Piensa en 3 o 4 números e identifica que tipo de triangulo o cuadrilatero tienes</h1>
+        <h1 class="title">Piensa en 3 o 4 números e identifica que tipo de triángulo o cuadrilátero tienes</h1>
 
         <div class="container-btn">
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary btn-type" data-toggle="modal" data-target="#modaltriagulo">
-        Triangulo
+        Triángulo
       </button>
 
             <!-- Modal -->
@@ -25,11 +25,11 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Triangulo</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Triángulo</h5>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Piensa en los 3 lados de un tringulo, ¿en que medidas estas pensando?, escribelas aquí y te diremos que tipo de triangulo es</p>
+                            <p>Piensa en los 3 lados de un triángulo, ¿En qué medidas estas pensando? Escribelas aquí y te diremos que tipo de triángulo es</p>
                             <label class="txt-lados" for="ladoT1">Lado #1</label>
                             <input id="ladoT1" name="data" class="form-control box-text" type="text" required onkeypress="return soloNumero(event)">
                             <label class="txt-lados" for="ladoT2">Lado #2</label>
@@ -42,7 +42,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal" id="resetT">Cerrar</button>
                             <button type="button" class="btn btn-primary" id="calcularTriangulo">Identificar</button>
-                            <button type="button" class="btn btn-primary" onclick="limpiarT()">limpar</button>
+                            <button type="button" class="btn btn-primary" onclick="limpiarT()">limpiar</button>
 
 
                         </div>
@@ -52,7 +52,7 @@
 
 
             <button type="button" class="btn btn-primary btn-type btn-cuadrilatero" data-toggle="modal" data-target="#modalcuadrilatero">
-                Cuadritero 
+                Cuadrilátero 
               </button>
 
             <!-- Modal -->
@@ -60,11 +60,11 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Cuadrilatero</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Cuadrilátero</h5>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Piensa en los 4 lados de un cuadrilatero, ¿en que medidas estas pensando?, escribelas aquí y te diremos que si es un cuadrado, un rectangulo o un trapecio</p>
+                            <p>Piensa en los 4 lados de un cuadrilátero, ¿En qué medidas estas pensando? Escribelas aquí y te diremos si es un cuadrado, un rectángulo o un trapecio</p>
                             <label class="txt-lados" for="ladoC1">Lado #1</label>
                             <input id="ladoC1" name="data" class="form-control box-text" type="text" required onkeypress="return soloNumero(event)">
                             <label class="txt-lados" for="ladoC2">Lado #2</label>
@@ -79,7 +79,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal" id="resetC">Cerrar</button>
                             <button type="button" class="btn btn-primary" id="calcularCuadrilatero">Identificar</button>
-                            <button type="button" class="btn btn-primary" onclick="limpiarC()">limpar</button>
+                            <button type="button" class="btn btn-primary" onclick="limpiarC()">limpiar</button>
 
 
                         </div>
