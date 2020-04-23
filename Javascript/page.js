@@ -11,9 +11,7 @@ function isTriangle(lado1, lado2, lado3) {
     //la suma de dos de sus lados debe ser mayor al tercer lado, se debe cumplir para las tres combinaciones
 
     if ((lado1 + lado2) > lado3 && (lado1 + lado3) > lado2 && (lado2 + lado3) > lado1) {
-        if (lado1 == 0 || lado2 == 0 || lado3 == 0) {
-            return ("Ingresaste un número 0, lo que quiere decir que no tienes valores correctos para la figura");
-        } else if (lado1 == lado2 && lado2 == lado3) {
+        if (lado1 == lado2 && lado2 == lado3) {
             return ("El triangulo es equilatero");
         } else if (lado1 == lado2 || lado2 == lado3 || lado1 == lado3) {
             return ("El triangulo es isosceles");
@@ -26,7 +24,7 @@ function isTriangle(lado1, lado2, lado3) {
 }
 
 function isCuadrilatero(lado1, lado2, lado3, lado4) {
-    
+
     //Validaciones para cuadrilarero
     if (lado1 == 0 || lado2 == 0 || lado3 == 0 || lado4 == 0) {
         return ("Ingresaste un número 0 lo que quiere decir que no tienes valores correctos para la figura");
